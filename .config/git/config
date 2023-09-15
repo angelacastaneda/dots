@@ -1,0 +1,9 @@
+[user]
+	name = Ángel Castañeda
+	email = angelaxel1420@disroot.org
+[color]
+	ui = auto
+[init]
+	defaultBranch = master
+[core]
+	editor = vim
