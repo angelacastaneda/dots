@@ -6,7 +6,7 @@ set encoding=utf-8
 set number
 set relativenumber
 
-" Status bar
+" Status bar always showing
 set laststatus=2
 
 " Highlight
