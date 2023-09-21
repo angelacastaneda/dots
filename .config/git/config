@@ -12,3 +12,8 @@
 	defaultBranch = master
 [core]
 	editor = vim
+[sendemail]
+  smtpserver = smtp.migadu.com
+  smtpuser = angel@acsq.me
+  smtpencryption  =  ssl
+  smtpserverport = 465
