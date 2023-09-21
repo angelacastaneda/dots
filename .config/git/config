@@ -1,6 +1,11 @@
 [user]
 	name = Ángel Castañeda
 	email = angel@acsq.me
+  signingkey = angel@acsq.me
+[commit]
+  gpgsign = true
+[tag]
+  gpgSign = true
 [color]
 	ui = auto
 [init]
