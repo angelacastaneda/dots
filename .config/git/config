@@ -19,3 +19,10 @@
   smtpserverport = 465
 [credential]
 	helper = cache --timeout 7200
+[alias]
+	a = add
+	ap = add --patch
+	st = status
+	ch = checkout
+	chm = checkout master
+	chd = checkout dev
