@@ -26,3 +26,4 @@
 	ch = checkout
 	chm = checkout master
 	chd = checkout dev
+	l = log --all --oneline --graph --decorate
