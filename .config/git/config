@@ -27,3 +27,5 @@
 	chm = checkout master
 	chd = checkout dev
 	l = log --all --oneline --graph --decorate
+[pull]
+	rebase = true
