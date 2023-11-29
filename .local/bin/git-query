@@ -6,7 +6,12 @@ if [ "$#" -ne 1 ]; then
   exit 0
 fi
 
-file="$1"
+path_to_file="$1"
+dir="$(dirname "$path_to_file")"
+file="$(basename "$path_to_file")"
+
+
+cd "$dir"
 git log --follow -n 1 --date=rfc --format="message: %s%n\
 hash: %H%n\
 date: %ad%n\
