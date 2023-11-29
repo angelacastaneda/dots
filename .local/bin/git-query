@@ -1,0 +1,15 @@
+#!/bin/sh -eu
+# script for querying local git repo for particular file's last commit
+
+if [ "$#" -ne 1 ]; then
+  printf "get yaml format of most recent git commit of file\nusage: git query <file>\n"
+  exit 0
+fi
+
+file="$1"
+git log --follow -n 1 --date=rfc --format="message: %s%n\
+hash: %H%n\
+date: %ad%n\
+author: %an%n\
+email: %ae%n\
+gpg-fingerprint: %GP" "$file" 
