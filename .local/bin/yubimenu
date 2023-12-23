@@ -1,0 +1,14 @@
+#!/bin/sh
+# simple script to get 2fa codes from yubikey
+
+account="$(ykman oath accounts list | bemenu -i -p "Get 2FA Code:" )"
+
+# TODO add real handling of nonvalid options being given
+if [ -z "$account" ]; then
+	echo "No account given!" && return 1
+fi
+
+code="$(ykman oath accounts code "$account" | awk '{print $NF}')"
+
+# TODO add x support
+wl-copy "$code"
