@@ -1,7 +1,20 @@
 #!/bin/sh
 # simple script to get 2fa codes from yubikey
 
-account="$(ykman oath accounts list | bemenu -i -p "Get 2FA Code:" )"
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	dmenu=bemenu
+	xclip="wl-copy"
+
+elif [ -n "$DISPLAY" ]; then
+	dmenu=dmenu
+	xclip="xclip -selection clipboard"
+else
+	echo "Error: No Wayland or X11 display detected" >&2
+	exit 1
+fi
+
+# TODO check if yubikey is plugged in first
+account="$(ykman oath accounts list | $dmenu -i -p "Get 2FA Code:" )"
 
 # TODO add real handling of nonvalid options being given
 if [ -z "$account" ]; then
@@ -11,4 +24,4 @@ fi
 code="$(ykman oath accounts code "$account" | awk '{print $NF}')"
 
 # TODO add x support
-wl-copy "$code"
+$xclip "$code"
