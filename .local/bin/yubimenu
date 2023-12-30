@@ -23,5 +23,4 @@ fi
 
 code="$(ykman oath accounts code "$account" | awk '{print $NF}')"
 
-# TODO add x support
-$xclip "$code"
+printf '%s' "$code" | $xclip
