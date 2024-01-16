@@ -72,6 +72,9 @@ alias grep="grep --color=auto"
 alias bc="bc -q"
 [ -f "$DCRC" ] && alias dc="dc -f $DCRC -"
 
+# abook
+alias abook="abook --config '$XDG_CONFIG_HOME/abook/abookrc' --datafile '$XDG_DATA_HOME/abook/addressbook'"
+
 # convenient git aliases
 alias gfa="git remote | xargs -L1 git fetch"
 alias gpa="git remote | xargs -L1 git push --all"
