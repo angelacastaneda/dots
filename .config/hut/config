@@ -1,0 +1,3 @@
+instance "sr.ht" {
+	access-token-cmd pass sourcehut/hut_oauth
+}
