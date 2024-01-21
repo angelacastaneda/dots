@@ -3,8 +3,8 @@
 set encoding=utf-8
 
 " Show line numbers
-set number
-set relativenumber
+set number         " line nums
+set relativenumber " relavive line nums
 
 " Status bar always showing
 set laststatus=2
@@ -19,22 +19,21 @@ set autoindent     " keeps indent the same for settings
 set shiftwidth=4   " indents 4 chars
 set tabstop=4      " ^
 
-" Don't make lame backup files
-set nobackup
+" no file safety
+set nobackup   " no backup files
 
 " scroll buffer distance
 set scrolloff=8
 
-" highlight while writing
-set incsearch
-set hlsearch
+" searching
+set incsearch " gradually show search as typed
+set hlsearch  " highlight search matches
 
-" no linewrap 
-set nowrap
+set nowrap " no linewrap
 
-" ignore case during search
-set ignorecase
-set smartcase
+" search
+set ignorecase " ignore case during search...
+set smartcase  " ...unless you actually use a cap
 
 " show last cmd typed on bottom
 set showcmd
