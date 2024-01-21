@@ -1,22 +1,22 @@
 [user]
 	name = Ángel Castañeda
 	email = angel@acsq.me
-  signingkey = angel@acsq.me
+	signingkey = angel@acsq.me
 [commit]
-  gpgsign = true
+	gpgsign = true
 [tag]
-  gpgSign = true
+	gpgSign = true
 [color]
 	ui = auto
 [init]
 	defaultBranch = master
 [core]
 	editor = vim
-[sendemail]
-  smtpserver = smtp.migadu.com
-  smtpuser = angel@acsq.me
-  smtpencryption  =  ssl
-  smtpserverport = 465
+[sendemail] # TODO set up msmtp script to put in sent folder
+	smtpserver = smtp.migadu.com
+	smtpuser = angel@acsq.me
+	smtpencryption  =  ssl
+	smtpserverport = 465
 [credential]
 	helper = cache --timeout 7200
 [alias]
