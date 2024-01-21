@@ -45,3 +45,6 @@ set showmode
 
 " show vim command history
 set history=1000
+
+" default to unix for filetype
+set ffs=unix,dos,mac
