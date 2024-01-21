@@ -44,8 +44,14 @@ export HISTFILE="$XDG_DATA_HOME/history"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export FZF_DEFAULT_OPTS="--height 50%"
-export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/notmuch-config"
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
+export DCRC="$XDG_CONFIG_HOME/dc/dcrc"
+
+# email
+export MAILDIR="$XDG_DATA_HOME/mail"
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/notmuch-config"
+export NOTMUCH_DATABASE="$XDG_DATA_HOME/mail"
+export MBSYNCRC="$XDG_CONFIG_HOME/isync/mbsyncrc"
 
 # gpodder
 export GPODDER_HOME="$XDG_CONFIG_HOME/gpodder"
@@ -60,7 +66,3 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
 export PASSWORD_STORE_GENERATED_LENGTH=20
 export PASSWORD_STORE_CHARACTER_SET="[:alnum:]!@#$%^&*"
-
-# fake hacks
-export MBSYNCRC="$XDG_CONFIG_HOME/isync/mbsyncrc"
-export DCRC="$XDG_CONFIG_HOME/dc/dcrc"
