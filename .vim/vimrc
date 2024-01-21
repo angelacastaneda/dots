@@ -12,12 +12,12 @@ set laststatus=2
 " Highlight
 syntax on
 
-" 2 space tab
-set shiftwidth=2
-set tabstop=2
-
-" spaces instead of tabs
-set expandtab
+" indent
+set noexpandtab    " tabs are tabs
+filetype indent on " indenting based on file extensions
+set autoindent     " keeps indent the same for settings
+set shiftwidth=4   " indents 4 chars
+set tabstop=4      " ^
 
 " Don't make lame backup files
 set nobackup
