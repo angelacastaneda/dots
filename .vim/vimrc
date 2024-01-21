@@ -21,6 +21,8 @@ set tabstop=4      " ^
 
 " no file safety
 set nobackup   " no backup files
+set noswapfile " no swaps either
+set nowb       " and another one
 
 " scroll buffer distance
 set scrolloff=8
