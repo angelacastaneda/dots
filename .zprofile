@@ -51,7 +51,7 @@ export DCRC="$XDG_CONFIG_HOME/dc/dcrc"
 
 # email
 export MAILDIR="$XDG_DATA_HOME/mail"
-export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/notmuch-config"
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/default/notmuch-config"
 export NOTMUCH_DATABASE="$XDG_DATA_HOME/mail"
 export MBSYNCRC="$XDG_CONFIG_HOME/isync/mbsyncrc"
 
