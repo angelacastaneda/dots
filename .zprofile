@@ -4,6 +4,7 @@
 # export basics
 export VISUAL="vim"
 export EDITOR="$VISUAL"
+export PAGER="less"
 export BROWSER="firefox"
 export TERMINAL="foot" # add check for st in x11
 
@@ -40,6 +41,7 @@ export PATH="$PATH:$CARGO_HOME/bin"
 export NVM_DIR="$XDG_DATA_HOME/nvm"
 
 # misc
+export LESS="R"
 export HISTFILE="$XDG_DATA_HOME/history"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"

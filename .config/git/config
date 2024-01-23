@@ -7,11 +7,12 @@
 [tag]
 	gpgSign = true
 [color]
-	ui = auto
+	ui = true
 [init]
 	defaultBranch = master
 [core]
 	editor = vim
+	pager = less
 [sendemail] # TODO set up msmtp script to put in sent folder
 	smtpserver = smtp.migadu.com
 	smtpuser = angel@acsq.me
