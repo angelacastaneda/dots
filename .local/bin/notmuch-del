@@ -1,6 +1,13 @@
-#!/bin/sh -e
+#!/bin/sh -eu
 # notmuch has the same thing as git where it autodetects scripts with its name
 # in $PATH, so you can just run this as `notmuch del`
+
+del_files="$(notmuch search tag:deleted)"
+
+if [ -z "$del_files" ]; then
+  echo "nothing to delete"
+  exit 0
+fi
 
 notmuch search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
 notmuch new
