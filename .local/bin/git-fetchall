@@ -1,0 +1,4 @@
+#!/bin/sh -e
+# found script here: https://stackoverflow.com/a/18674313/21316874
+
+git remote | xargs -L1 git fetch
