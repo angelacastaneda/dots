@@ -55,6 +55,7 @@ SAVEHIST=10000000
 alias zshrc="$EDITOR ~/.zshrc && source ~/.zshrc"
 alias rm="rm -i"
 alias cal="cal -m"
+alias ping="ping -c 3"
 [ -x "$(command -v doas)" ] && alias sudo='doas'
 
 # source "$XDG_CONFIG_HOME/shell/aliasrc"  TODO migrate aliases away from here
