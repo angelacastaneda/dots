@@ -9,5 +9,12 @@ if [ -z "$del_files" ]; then
   exit 0
 fi
 
+err_files="$(notmuch search tag:deleted and \( tag:memory or tag:receipt \))"
+if [ -n "$err_files" ]; then
+  echo "DO NOT DEL"
+  echo "$err_files"
+  exit 1
+fi
+
 notmuch search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
 notmuch new
