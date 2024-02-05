@@ -73,6 +73,13 @@ alias grep="grep --color=auto"
 alias bc="bc -q"
 [ -f "$DCRC" ] && alias dc="dc -f $DCRC -"
 
+lfcd() {
+	# command given in case lf aliases to lfcd
+	cd "$(command lf -print-last-dir "$@")"
+}
+
+bindkey -s '^o' 'lfcd\n'
+
 # abook
 alias abook="abook --config '$XDG_CONFIG_HOME/abook/abookrc' --datafile '$XDG_DATA_HOME/abook/addressbook'"
 
