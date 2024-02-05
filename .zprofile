@@ -48,6 +48,7 @@ export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export FZF_DEFAULT_OPTS="--height 50%"
 export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export DCRC="$XDG_CONFIG_HOME/dc/dcrc"
+export BAT_THEME="everforest"
 
 # email
 export MAILDIR="$XDG_DATA_HOME/mail"
