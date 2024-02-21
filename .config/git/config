@@ -19,6 +19,7 @@
 	smtpuser = angel@acsq.me
 	smtpencryption  =  ssl
 	smtpserverport = 465
+	annotate = yes
 [credential]
 	helper = cache --timeout 7200
 [alias]
