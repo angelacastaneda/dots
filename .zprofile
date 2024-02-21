@@ -40,6 +40,10 @@ export PATH="$PATH:$CARGO_HOME/bin"
 # node
 export NVM_DIR="$XDG_DATA_HOME/nvm"
 
+# commonlisp
+export ROSWELL_HOME="$XDG_DATA_HOME/roswell"
+export PATH="$PATH:$ROSWELL_HOME/bin"
+
 # misc
 export LESS="R"
 export HISTFILE="$XDG_DATA_HOME/history"
