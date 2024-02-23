@@ -1,0 +1,9 @@
+#!/bin/sh
+# credits to sewn@disroot.org -> https://lists.sr.ht/~adnano/wmenu-devel/patches/49727
+
+IFS=:
+for p in $PATH; do
+	for e in $p/*; do
+		[ -x $e ] && echo ${e##*/}
+	done
+done | sort -u | wmenu "$@" | ${SHELL:-"/bin/sh"} &
