@@ -2,7 +2,7 @@
 # simple script to get 2fa codes from yubikey
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
-	dmenu=bemenu
+	dmenu=wmenu
 	xclip="wl-copy"
 
 elif [ -n "$DISPLAY" ]; then
