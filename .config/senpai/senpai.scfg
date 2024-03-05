@@ -1,4 +1,6 @@
-address "chat.sr.ht:6697"
-nickname "acsqdotme"
-username "acsqdotme"
-password-cmd "pass" "sourcehut/chat.sr.ht"
+address      chat.sr.ht:6697
+nickname     angle
+username     acsqdotme
+realname     angel B-)
+password-cmd pass sourcehut/chat.sr.ht
+typings      false
