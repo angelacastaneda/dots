@@ -52,7 +52,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 HISTSIZE=10000000
 SAVEHIST=10000000
 
-alias zshrc="$EDITOR ~/.zshrc && source ~/.zshrc"
+alias zshrc="$EDITOR ${ZDOTDIR:-${HOME}}/.zshrc && source ${ZDOTDIR:-${HOME}}/.zshrc"
 alias rm="rm -i"
 alias cal="cal -m"
 alias ping="ping -c 3"
