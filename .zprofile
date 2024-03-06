@@ -26,6 +26,9 @@ if [ -z "$XDG_RUNTIME_DIR" ]; then
 	export XDG_RUNTIME_DIR
 fi
 
+# zsh
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
 # go stuff
 export GOPROXY=direct
 export GOPATH="$XDG_DATA_HOME/go"
