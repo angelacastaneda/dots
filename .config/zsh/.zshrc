@@ -78,7 +78,7 @@ lfcd() {
 	cd "$(command lf -print-last-dir "$@")"
 }
 
-bindkey -s '^o' '\x15lfcd\n' # \x15 clears line before running cmd
+bindkey -s '^o' '^ulfcd\n'
 
 # abook
 alias abook="abook --config '$XDG_CONFIG_HOME/abook/abookrc' --datafile '$XDG_DATA_HOME/abook/addressbook'"
