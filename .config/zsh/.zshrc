@@ -80,6 +80,13 @@ lfcd() {
 
 bindkey -s '^o' '^ulfcd\n'
 
+fzfcd() {
+	# command given in case lf aliases to lfcd
+	cd "$(dirname "$(find . -mindepth 1 -not -path '*/\.git/*' | fzf)")"
+}
+
+bindkey -s '^f' '^ufzfcd\n'
+
 # abook
 alias abook="abook --config '$XDG_CONFIG_HOME/abook/abookrc' --datafile '$XDG_DATA_HOME/abook/addressbook'"
 
