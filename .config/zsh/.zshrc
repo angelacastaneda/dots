@@ -10,6 +10,9 @@ zstyle ':vcs_info:git:*' formats '%F{green}%b%f '
 
 PS1='%F{red}%n%f@%F{blue}%m%f:%~ ${vcs_info_msg_0_}$ '
 
+compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+mkdir -p "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+
 # vim mode
 bindkey -v
 export KEYTIMEOUT=1
