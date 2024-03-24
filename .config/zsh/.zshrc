@@ -10,9 +10,6 @@ zstyle ':vcs_info:git:*' formats '%F{green}%b%f '
 
 PS1='%F{red}%n%f@%F{blue}%m%f:%~ ${vcs_info_msg_0_}$ '
 
-compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
-mkdir -p "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
-
 # vim mode
 bindkey -v
 export KEYTIMEOUT=1
@@ -95,6 +92,9 @@ alias abook="abook --config '$XDG_CONFIG_HOME/abook/abookrc' --datafile '$XDG_DA
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
+mkdir -p "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 # source syntax highlighting at end
