@@ -9,7 +9,7 @@ alias rm="rm -iv"
 alias cal="cal -m"
 alias ping="ping -c 3"
 alias cp="cp -v"
-alias mv="cp -iv"
+alias mv="mv -iv"
 
 alias zshrc="$EDITOR ${ZDOTDIR:-${HOME}}/.zshrc && source ${ZDOTDIR:-${HOME}}/.zshrc"
 [ -x "$(command -v doas)" ] && alias sudo='doas'
