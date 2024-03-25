@@ -19,7 +19,9 @@ alias zshrc="$EDITOR ${ZDOTDIR:-${HOME}}/.zshrc && source ${ZDOTDIR:-${HOME}}/.z
 
 # calcs
 alias bc="bc -q"
-[ -f "$DCRC" ] && alias dc="dc -f $DCRC -"
+if dc --help 2>&1 | grep -iq gnu && [ -f "$DCRC" ]; then
+	alias dc="dc -f $DCRC -"
+fi
 
 # abook
 alias abook="abook --config '$XDG_CONFIG_HOME/abook/abookrc' --datafile '$XDG_DATA_HOME/abook/addressbook'"
