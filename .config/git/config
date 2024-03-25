@@ -30,6 +30,7 @@
 	chm = checkout master
 	chd = checkout dev
 	l = log --all --oneline --graph --decorate
+	fault = blame -CCCw
 [pull]
 	rebase = true
 [merge]
