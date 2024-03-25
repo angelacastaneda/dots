@@ -64,6 +64,10 @@ export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
 export DCRC="$XDG_CONFIG_HOME/dc/dcrc"
 export BAT_THEME="everforest"
 
+# today
+export TODAY_DIR="$XDG_DATA_HOME/today"
+export TODAY_SUFFIX=".md.gpg"
+
 # email
 export MAILDIR="$XDG_DATA_HOME/mail"
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/default/notmuch-config"
