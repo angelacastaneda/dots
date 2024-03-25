@@ -1,0 +1,25 @@
+#!/bin/sh -eu
+
+# colors
+alias ls="ls --color=auto"
+alias tree="tree -C"
+alias grep="grep --color=auto"
+
+alias rm="rm -iv"
+alias cal="cal -m"
+alias ping="ping -c 3"
+alias cp="cp -v"
+alias mv="cp -iv"
+
+alias zshrc="$EDITOR ${ZDOTDIR:-${HOME}}/.zshrc && source ${ZDOTDIR:-${HOME}}/.zshrc"
+[ -x "$(command -v doas)" ] && alias sudo='doas'
+
+# mailsync stuff
+[ -f "$MBSYNCRC" ] && alias mbsync="mbsync -c $MBSYNCRC"
+
+# calcs
+alias bc="bc -q"
+[ -f "$DCRC" ] && alias dc="dc -f $DCRC -"
+
+# abook
+alias abook="abook --config '$XDG_CONFIG_HOME/abook/abookrc' --datafile '$XDG_DATA_HOME/abook/addressbook'"

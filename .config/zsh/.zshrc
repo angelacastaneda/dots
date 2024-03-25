@@ -52,26 +52,8 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 HISTSIZE=10000000
 SAVEHIST=10000000
 
-alias zshrc="$EDITOR ${ZDOTDIR:-${HOME}}/.zshrc && source ${ZDOTDIR:-${HOME}}/.zshrc"
-alias rm="rm -i"
-alias cal="cal -m"
-alias ping="ping -c 3"
-[ -x "$(command -v doas)" ] && alias sudo='doas'
-
-# source "$XDG_CONFIG_HOME/shell/aliasrc"  TODO migrate aliases away from here
+source "$XDG_CONFIG_HOME/shell/aliasrc"
 source "$XDG_CONFIG_HOME/shell/bookmarks"
-
-# color
-alias ls="ls --color=auto"
-alias tree="tree -C"
-alias grep="grep --color=auto"
-
-# mailsync stuff
-[ -f "$MBSYNCRC" ] && alias mbsync="mbsync -c $MBSYNCRC"
-
-# calculators
-alias bc="bc -q"
-[ -f "$DCRC" ] && alias dc="dc -f $DCRC -"
 
 lfcd() {
 	# command given in case lf aliases to lfcd
@@ -86,9 +68,6 @@ fzfcd() {
 }
 
 bindkey -s '^f' '^ufzfcd\n'
-
-# abook
-alias abook="abook --config '$XDG_CONFIG_HOME/abook/abookrc' --datafile '$XDG_DATA_HOME/abook/addressbook'"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
