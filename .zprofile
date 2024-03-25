@@ -31,9 +31,11 @@ export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 
 # go stuff
 export GOPROXY=direct
+export GOSUMDB=off
+export GOTELEMETRY=off
+export GOTOOLCHAIN=local
 export GOPATH="$XDG_DATA_HOME/go"
 export GOBIN="$GOPATH/bin"
-export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 export PATH="$PATH:$GOBIN"
 
 # rust
