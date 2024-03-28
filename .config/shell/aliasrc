@@ -25,3 +25,8 @@ fi
 
 # abook
 alias abook="abook --config '$XDG_CONFIG_HOME/abook/abookrc' --datafile '$XDG_DATA_HOME/abook/addressbook'"
+
+# colored ssh w/ foot
+if [ "$TERM" = "foot" ]; then
+	alias ssh='TERM=xterm-256color ssh'
+fi
