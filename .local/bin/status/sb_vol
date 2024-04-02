@@ -1,0 +1,3 @@
+#!/bin/sh -e
+
+pamixer --get-volume-human
