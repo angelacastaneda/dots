@@ -1,5 +1,4 @@
 #!/bin/sh
-# shellcheck disable=SC2155
 
 # export basics
 export VISUAL="vim"
