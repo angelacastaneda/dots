@@ -1,0 +1,88 @@
+#!/bin/sh
+
+# export basics
+export VISUAL="vi"
+export EDITOR="$VISUAL"
+export PAGER="less"
+export BROWSER="firefox"
+export TERMINAL="foot" # add check for st in x11
+
+# recursively add dirs in .local/bin to PATH
+export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ":" -)"
+
+# anything in ~/bin supercedes path items
+export PATH="$HOME/bin:$PATH"
+
+# xdg defs
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_STATE_HOME="$HOME/.local/state"
+if [ -z "$XDG_RUNTIME_DIR" ]; then
+	XDG_RUNTIME_DIR="/tmp/$(id -u)-runtime-dir"
+
+	mkdir -pm 0700 "$XDG_RUNTIME_DIR"
+	export XDG_RUNTIME_DIR
+fi
+
+# go stuff
+export GOPROXY=direct
+export GOSUMDB=off
+export GOTELEMETRY=off
+export GOTOOLCHAIN=local
+export GOPATH="$XDG_DATA_HOME/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$PATH:$GOBIN"
+
+# rust
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export PATH="$PATH:$CARGO_HOME/bin"
+
+# node
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
+export NVM_DIR="$XDG_DATA_HOME/nvm"
+
+# commonlisp
+export ROSWELL_HOME="$XDG_DATA_HOME/roswell"
+export PATH="$PATH:$ROSWELL_HOME/bin"
+
+# R
+export R_LIBS_USER="$XDG_DATA_HOME/R/%p-library/%v"
+mkdir -p "$(Rscript -e 'cat(Sys.getenv("R_LIBS_USER"))')"
+
+# misc
+export LESS="R"
+export HISTFILE="$XDG_DATA_HOME/history"
+export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
+export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+export FZF_DEFAULT_OPTS="--height 50%"
+export FZF_DEFAULT_COMMAND="find . -type f -not -path '*/\.git/*'"
+export PSQL_HISTORY="$XDG_DATA_HOME/psql_history"
+export DCRC="$XDG_CONFIG_HOME/dc/dcrc"
+export BAT_THEME="everforest"
+
+# today
+export TODAY_DIR="$XDG_DATA_HOME/today"
+export TODAY_SUFFIX=".md.gpg"
+
+# email
+export MAILDIR="$XDG_DATA_HOME/mail"
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/default/notmuch-config"
+export NOTMUCH_DATABASE="$XDG_DATA_HOME/mail"
+export MBSYNCRC="$XDG_CONFIG_HOME/isync/mbsyncrc"
+export MBLAZE="$XDG_CONFIG_HOME/mblaze"
+export MBLAZE_PAGER=cat
+
+# gpodder
+export GPODDER_HOME="$XDG_CONFIG_HOME/gpodder"
+export GPODDER_DOWNLOAD_HOME="$XDG_DATA_HOME/gpodder"
+
+# gpg stuff
+export GPG_TTY="$(tty)"
+export KEYID=0x099F4FAFE6D2E988
+export GNUPGHOME="$XDG_DATA_HOME/gnupg"
+
+# pass stuff
+export PASSWORD_STORE_DIR="$XDG_DATA_HOME/password-store"
+export PASSWORD_STORE_GENERATED_LENGTH=20
+export PASSWORD_STORE_CHARACTER_SET="[:alnum:]!@#$%^&*"
