@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # export basics
-export VISUAL="vim"
+export VISUAL="vi"
 export EDITOR="$VISUAL"
 export PAGER="less"
 export BROWSER="firefox"
