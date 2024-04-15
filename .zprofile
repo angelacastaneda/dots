@@ -73,6 +73,8 @@ export MAILDIR="$XDG_DATA_HOME/mail"
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/default/notmuch-config"
 export NOTMUCH_DATABASE="$XDG_DATA_HOME/mail"
 export MBSYNCRC="$XDG_CONFIG_HOME/isync/mbsyncrc"
+export MBLAZE="$XDG_CONFIG_HOME/mblaze"
+export MBLAZE_PAGER=cat
 
 # gpodder
 export GPODDER_HOME="$XDG_CONFIG_HOME/gpodder"
