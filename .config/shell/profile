@@ -48,7 +48,7 @@ export R_LIBS_USER="$XDG_DATA_HOME/R/%p-library/%v"
 mkdir -p "$(Rscript -e 'cat(Sys.getenv("R_LIBS_USER"))')"
 
 # misc
-export LESS="R"
+export LESS="Ri"
 export HISTFILE="$XDG_DATA_HOME/history"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
