@@ -12,7 +12,6 @@
 	defaultBranch = master
 [core]
 	editor = vim
-	pager = less
 	hooksPath = ~/.config/git/hooks
 [sendemail] # TODO set up msmtp script to put in sent folder
 	smtpserver = smtp.migadu.com
