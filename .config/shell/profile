@@ -7,11 +7,8 @@ export PAGER="less"
 export BROWSER="firefox"
 export TERMINAL="foot" # add check for st in x11
 
-# recursively add dirs in .local/bin to PATH
-export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ":" -)"
-
-# anything in ~/bin supercedes path items
-export PATH="$HOME/bin:$PATH"
+# recursively add dirs in .local/bin to PATH, shadowing other bins
+export PATH="$(find ~/.local/bin -type d | paste -sd ":" -):$PATH"
 
 # xdg defs
 export XDG_CONFIG_HOME="$HOME/.config"
