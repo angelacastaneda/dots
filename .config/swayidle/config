@@ -1,0 +1,1 @@
+timeout 300 'waylock -init-color 0x000000 -input-color 0x458588 -fail-color 0xcc241d'
