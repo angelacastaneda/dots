@@ -1,0 +1,57 @@
+root = true
+
+[*]
+charset = utf-8
+
+indent_style = tab
+indent_size = 8
+
+max_line_length = 80
+
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{html,css,py,rs,lua}]
+indent_style = space
+indent_size = 4
+
+[*.{md,Rmd}]
+# weird syntax
+trim_trailing_whitespace = false
+indent_style = space
+indent_size = 4
+
+[*.{json,yml,yaml,toml,js,ts,rb,R,typ}]
+indent_style = space
+indent_size = 2
+
+[*.org]
+# everything about org mode is fickle
+indent_style = unset
+indent_size = unset
+# org links hide in the grass like snakes and are 3x longer than shown
+max_line_length = off
+
+[*Makefile]
+indent_style = tab
+
+[Dockerfile]
+indent_style = space
+indent_size = 4
+
+[*.ha]
+indent_style = tab
+indent_size = 8
+
+[{*.go,go.mod,go.sum,*.templ}]
+indent_style = tab
+indent_size = 4
+
+[*.{lisp,lsp,rkt,scm,fnl,el,janet}]
+indent_style = space
+indent_size = 2
+
+[*.eml]
+max_line_length = 72
+end_of_line = crlf
