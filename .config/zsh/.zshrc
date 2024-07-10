@@ -75,3 +75,5 @@ source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.
 eval "$(zoxide init zsh)"
 alias cd=z
 eval "$(fzf --zsh)"
+
+[ -f "/home/angel/.ghcup/env" ] && . "/home/angel/.ghcup/env" # ghcup-env
