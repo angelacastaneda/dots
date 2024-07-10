@@ -36,3 +36,5 @@
 	conflictstyle = zdiff3
 [diff]
 	algorithm = histogram
+[maintenance]
+	repo = /home/angel/repos/aports
