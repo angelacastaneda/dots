@@ -1,15 +1,18 @@
 #!/bin/sh -eu
 
 # colors
-alias ls="ls --color=auto"
+alias ls="ls --color=auto -F"
 alias tree="tree -C"
 alias grep="grep --color=auto"
 
 alias rm="rm -iv"
+alias shred="shred -v"
 alias cal="cal -m"
 alias ping="ping -c 3"
 alias cp="cp -v"
 alias mv="mv -iv"
+alias mkdir="mkdir -v"
+alias rmdir="rmdir -v"
 
 alias zshrc="$EDITOR ${ZDOTDIR:-${HOME}}/.zshrc && source ${ZDOTDIR:-${HOME}}/.zshrc"
 [ -x "$(command -v doas)" ] && alias sudo='doas'
