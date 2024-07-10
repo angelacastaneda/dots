@@ -15,6 +15,7 @@ alias mkdir="mkdir -v"
 alias rmdir="rmdir -v"
 
 alias zshrc="$EDITOR ${ZDOTDIR:-${HOME}}/.zshrc && source ${ZDOTDIR:-${HOME}}/.zshrc"
+alias aliasrc="$EDITOR $XDG_CONFIG_HOME/shell/aliasrc && source ${ZDOTDIR:-${HOME}}/.zshrc"
 [ -x "$(command -v doas)" ] && alias sudo='doas'
 
 # mailsync stuff
