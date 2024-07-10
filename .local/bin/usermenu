@@ -1,0 +1,13 @@
+#!/bin/sh -eu
+# script to get login names/emails from filenames in password store
+
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	clip="wl-copy"
+elif [ -n "$DISPLAY" ]; then
+	clip="xclip -selection clipboard"
+else
+	echo "Error: No Wayland or X11 display detected" >&2
+	exit 1
+fi
+
+gopass ls --flat | menu | xargs --no-run-if-empty basename | "$clip"
