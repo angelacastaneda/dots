@@ -1,0 +1,7 @@
+#!/bin/sh -eu
+# counts upgradeable packages
+
+if command -v apk >/dev/null 2>&1; then
+	upgradeable="$(apk list -u | wc -l)"
+fi
+printf '📦%s' "${upgradeable:-0}"
