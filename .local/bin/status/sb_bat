@@ -1,0 +1,37 @@
+#!/bin/sh -eu
+# battery module for status bar
+
+bat="$1"
+cap="$(cat /sys/class/power_supply/"$bat"/capacity)"
+stat="$(cat /sys/class/power_supply/"$bat"/status)"
+
+case $stat in
+	"Full")
+		emoji=⚡
+		;;
+	"Discharging")
+		if [ "$cap" -gt 87 ]; then
+			emoji=
+		elif [ "$cap" -gt 62 ]; then
+			emoji=
+		elif [ "$cap" -gt 37 ]; then
+			emoji=
+		elif [ "$cap" -gt 10 ]; then
+			emoji=
+		else
+			emoji=
+		fi
+		;;
+
+	"Not charging")
+		emoji=⚠️
+		;;
+	"Charging")
+		emoji=🔌
+		;;
+	*)
+		emoji=❓
+		;;
+esac
+
+printf '%s %s%%' "$emoji" "$cap"
