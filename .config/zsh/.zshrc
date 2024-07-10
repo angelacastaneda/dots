@@ -74,3 +74,4 @@ bindkey -s '^f' '^ufzfcd\n'
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 eval "$(zoxide init zsh)"
 alias cd=z
+eval "$(fzf --zsh)"
