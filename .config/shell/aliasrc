@@ -26,9 +26,16 @@ alias bc="bc -q"
 if dc --help 2>&1 | grep -iq gnu && [ -f "$DCRC" ]; then
 	alias dc="dc -f $DCRC -"
 fi
+alias R="R -q --no-save"
 
 # abook
-alias abook="abook --config '$XDG_CONFIG_HOME/abook/abookrc' --datafile '$XDG_DATA_HOME/abook/addressbook'"
+alias abook="abook --config $XDG_CONFIG_HOME/abook/abookrc --datafile $XDG_DATA_HOME/abook/addressbook"
+
+# music
+alias yt-mu="yt-dlp -f bestaudio -x --audio-quality 0"
+
+# fastfetch
+alias neofetch=fastfetch
 
 # colored ssh w/ foot
 if [ "$TERM" = "foot" ]; then
