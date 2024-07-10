@@ -72,3 +72,5 @@ bindkey -s '^f' '^ufzfcd\n'
 
 # source syntax highlighting at end
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+eval "$(zoxide init zsh)"
+alias cd=z
