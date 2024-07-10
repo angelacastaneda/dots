@@ -1,7 +1,7 @@
 # git prompt
 autoload -Uz vcs_info
-precmd() { 
-  vcs_info 
+precmd() {
+  vcs_info
 }
 setopt PROMPT_SUBST
 
@@ -53,7 +53,6 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 
 source "$XDG_CONFIG_HOME/shell/aliasrc"
-source "$XDG_CONFIG_HOME/shell/bookmarks"
 
 lfcd() {
 	# command given in case lf aliases to lfcd
@@ -63,7 +62,6 @@ lfcd() {
 bindkey -s '^o' '^ulfcd\n'
 
 fzfcd() {
-	# command given in case lf aliases to lfcd
 	cd "$(dirname "$(find . -mindepth 1 -not -path '*/\.git/*' | fzf)")"
 }
 
@@ -72,12 +70,5 @@ bindkey -s '^f' '^ufzfcd\n'
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
-mkdir -p "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
-
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 # source syntax highlighting at end
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
