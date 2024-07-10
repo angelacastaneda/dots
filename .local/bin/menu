@@ -1,0 +1,10 @@
+#!/bin/sh -e
+# generic menu for scripts
+
+if [ -n "$WAYLAND_DISPLAY" ]; then
+	exec mew
+elif [ -n "$DISPLAY" ]; then
+	exec dmenu
+else
+	exec fzf
+fi
