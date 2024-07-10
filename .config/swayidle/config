@@ -1,1 +1,2 @@
 timeout 300 'wlock -c 000000 -i 458588 -a 3e777a -f cc241d'
+timeout 900 'powerctl mem'
