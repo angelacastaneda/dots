@@ -1,0 +1,4 @@
+#!/bin/sh -e
+# micro passmenu from gopass docs
+
+gopass ls --flat | menu | xargs --no-run-if-empty gopass show -c
